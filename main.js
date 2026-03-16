@@ -336,7 +336,7 @@ const navObs = new IntersectionObserver(entries => {
     const active = document.querySelector(`.nav-item[href="#${e.target.id}"]`);
     if (active) active.classList.add('active');
   });
-}, { threshold: 0.3 });
+}, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
 
 document.querySelectorAll('section[id]').forEach(s => navObs.observe(s));
 
