@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="corecommit — systems dev & builder. C++, Python, JS, self-hosted tools.">
+  <title>CORECOMMIT | Systems Developer</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23ec5b13'/><line x1='22' y1='6' x2='10' y2='26' stroke='%230a0a0a' stroke-width='4' stroke-linecap='square'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Public+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── MODAL ──────────────────────────────────────────────────────────────── -->
+<div class="modal-backdrop" id="modal-backdrop">
+  <div class="modal">
+    <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-tag" id="modal-tag"></div>
+    <div class="modal-name" id="modal-name"></div>
+    <div class="modal-desc" id="modal-desc"></div>
+    <div class="modal-actions">
+      <a class="modal-btn modal-btn-primary" id="modal-btn-website" href="#" target="_blank">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> VIEW WEBSITE
+      </a>
+      <a class="modal-btn modal-btn-ghost" id="modal-btn-source" href="#" target="_blank">
+        <i class="fa-brands fa-github"></i> VIEW SOURCE
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ── LAYOUT ─────────────────────────────────────────────────────────────── -->
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <div class="sidebar-name">CORECOMMIT</div>
+      <div class="sidebar-version">Systems Architect // v2.0.4</div>
+
+      <nav class="sidebar-nav">
+        <a href="#home"     class="nav-item active"><i class="fa-solid fa-house"></i> Index</a>
+        <a href="#projects" class="nav-item"><i class="fa-solid fa-code"></i> Repository</a>
+        <a href="#skills"   class="nav-item"><i class="fa-solid fa-wrench"></i> Toolkit</a>
+        <a href="#contact"  class="nav-item"><i class="fa-solid fa-envelope"></i> Signal</a>
+      </nav>
+    </div>
+
+    <div class="sidebar-bottom">
+      <div class="status-card">
+        <div class="status-dot-wrap">
+          <span class="status-pulse"></span>
+          <span class="status-core"></span>
+          <span class="status-label">STATUS: ONLINE</span>
+        </div>
+        <p class="status-text">OPEN TO<br>COLLABORATING</p>
+      </div>
+      <div class="sidebar-socials">
+        <a href="https://github.com/corecommit" target="_blank" class="social-link">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- ── HERO ─────────────────────────────────────────────────────────── -->
+    <section class="hero" id="home">
+      <div class="hero-dot-grid"></div>
+      <div class="hero-inner">
+        <div class="hero-tag">[0x00] Initialize Core</div>
+        <h1 class="hero-headline">
+          BUILDING TOOLS<br>
+          <span class="hero-accent">I ACTUALLY USE.</span>
+        </h1>
+        <div class="hero-sub-wrap">
+          <p class="hero-sub">
+            I build things from scratch — code editors, home servers,
+            self-hosted cloud storage. No fluff. Mostly C++, Python and
+            whatever the job needs.
+          </p>
+        </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">VIEW REPOSITORY</a>
+          <a href="#contact"  class="btn-ghost">INITIATE CONTACT</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-val" id="stat-repos">—</span>
+            <span class="hero-stat-label">PUBLIC REPOS</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-val" id="stat-stars">—</span>
+            <span class="hero-stat-label">TOTAL STARS</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-val" id="stat-langs">—</span>
+            <span class="hero-stat-label">LANGUAGES</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS ───────────────────────────────────────────────────────── -->
+    <section class="section" id="skills">
+      <div class="section-head">
+        <div>
+          <div class="section-tag">[0x01] Technical Stack</div>
+          <h2 class="section-title">THE TOOLKIT</h2>
+        </div>
+        <p class="section-aside">LANGUAGES, TOOLS AND<br>ECOSYSTEM KNOWLEDGE.</p>
+      </div>
+
+      <!-- Language cards -->
+      <div class="skill-grid">
+
+        <div class="skill-card skill-card--primary">
+          <div class="skill-card-top">
+            <span class="skill-card-code">LANG.01</span>
+            <i class="fa-solid fa-microchip skill-card-icon"></i>
+          </div>
+          <h3 class="skill-card-name">C++</h3>
+          <p class="skill-card-desc">Systems programming, GUI apps, performance-critical tools.</p>
+          <div class="skill-card-tags">
+            <span class="stag">C++17</span><span class="stag">SDL2</span><span class="stag">OOP</span>
+          </div>
+        </div>
+
+        <div class="skill-card skill-card--primary">
+          <div class="skill-card-top">
+            <span class="skill-card-code">LANG.02</span>
+            <i class="fa-brands fa-python skill-card-icon"></i>
+          </div>
+          <h3 class="skill-card-name">Python</h3>
+          <p class="skill-card-desc">Scripting, automation, backend tooling and rapid prototyping.</p>
+          <div class="skill-card-tags">
+            <span class="stag">Scripting</span><span class="stag">Backend</span><span class="stag">Automation</span>
+          </div>
+        </div>
+
+        <div class="skill-card skill-card--primary">
+          <div class="skill-card-top">
+            <span class="skill-card-code">LANG.03</span>
+            <i class="fa-brands fa-html5 skill-card-icon"></i>
+          </div>
+          <h3 class="skill-card-name">HTML/CSS</h3>
+          <p class="skill-card-desc">Semantic markup, responsive layouts, raw CSS without frameworks.</p>
+          <div class="skill-card-tags">
+            <span class="stag">Semantic</span><span class="stag">Responsive</span><span class="stag">Raw</span>
+          </div>
+        </div>
+
+        <div class="skill-card skill-card--learning">
+          <div class="skill-card-top">
+            <span class="skill-card-code">LANG.04 <span class="learning-badge">LEARNING</span></span>
+            <i class="fa-brands fa-js skill-card-icon"></i>
+          </div>
+          <h3 class="skill-card-name">JavaScript</h3>
+          <p class="skill-card-desc">Frontend scripting, Node.js backends, Express APIs.</p>
+          <div class="skill-card-tags">
+            <span class="stag">Node.js</span><span class="stag">Express</span><span class="stag">Basics</span>
+          </div>
+        </div>
+
+        <div class="skill-card skill-card--learning">
+          <div class="skill-card-top">
+            <span class="skill-card-code">LANG.05 <span class="learning-badge">LEARNING</span></span>
+            <i class="fa-brands fa-java skill-card-icon"></i>
+          </div>
+          <h3 class="skill-card-name">Java</h3>
+          <p class="skill-card-desc">Object-oriented programming, CLI tooling, basic backend.</p>
+          <div class="skill-card-tags">
+            <span class="stag">OOP</span><span class="stag">CLI</span><span class="stag">Basics</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tools row -->
+      <div class="tools-row">
+        <div class="tools-label">[ECOSYSTEM]</div>
+        <div class="tools-chips">
+          <span class="tool-chip"><i class="fa-brands fa-linux"></i> Linux</span>
+          <span class="tool-chip"><i class="fa-brands fa-docker"></i> Docker</span>
+          <span class="tool-chip"><i class="fa-brands fa-git-alt"></i> Git</span>
+          <span class="tool-chip"><i class="fa-solid fa-plug"></i> REST APIs</span>
+          <span class="tool-chip"><i class="fa-solid fa-gamepad"></i> SDL2</span>
+          <span class="tool-chip"><i class="fa-solid fa-server"></i> Self-Hosting</span>
+          <span class="tool-chip"><i class="fa-solid fa-moon"></i> Lua</span>
+          <span class="tool-chip"><i class="fa-solid fa-network-wired"></i> Tailscale</span>
+          <span class="tool-chip"><i class="fa-solid fa-border-all"></i> Hyprland</span>
+          <span class="tool-chip"><i class="fa-solid fa-terminal"></i> Bash</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ─────────────────────────────────────────────────────── -->
+    <section class="section" id="projects">
+      <div class="section-head">
+        <div>
+          <div class="section-tag">[0x02] Shipped Units</div>
+          <h2 class="section-title">PROJECT LOG</h2>
+        </div>
+        <div class="project-controls">
+          <span class="repo-count" id="repo-count"></span>
+          <div class="sort-row">
+            <button class="sort-btn active" data-sort="updated"><i class="fa-solid fa-clock-rotate-left"></i> RECENT</button>
+            <button class="sort-btn" data-sort="stars"><i class="fa-solid fa-star"></i> STARS</button>
+            <button class="sort-btn" data-sort="name"><i class="fa-solid fa-arrow-down-a-z"></i> A–Z</button>
+            <button class="sort-btn" data-sort="forks"><i class="fa-solid fa-code-fork"></i> FORKS</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="projects-container">
+        <div class="state-box"><div class="spinner"></div> fetching repos from github...</div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ───────────────────────────────────────────────────────── -->
+    <section class="section contact-section" id="contact">
+      <div class="contact-bg-text">END</div>
+      <div class="section-tag">[0x03] Termination</div>
+      <h2 class="contact-headline">READY TO<br>COLLABORATE?</h2>
+      <p class="contact-sub">
+        GOT A PROJECT IDEA, WANT TO COLLABORATE,<br>
+        OR JUST WANT TO TALK CODE — REACH OUT.
+      </p>
+      <a href="mailto:commitcore@gmail.com" class="btn-primary btn-large">
+        <i class="fa-solid fa-paper-plane"></i> EXECUTE: SEND_MAIL
+      </a>
+
+      <div class="contact-links">
+        <a href="https://github.com/corecommit" target="_blank" class="contact-link">
+          <i class="fa-brands fa-github"></i>
+          <span>github.com/corecommit</span>
+          <i class="fa-solid fa-arrow-up-right-from-square contact-link-arrow"></i>
+        </a>
+        <a href="mailto:commitcore@gmail.com" class="contact-link">
+          <i class="fa-solid fa-envelope"></i>
+          <span>commitcore@gmail.com</span>
+          <i class="fa-solid fa-arrow-up-right-from-square contact-link-arrow"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <span>&copy; 2026 CORECOMMIT. ALL RIGHTS RESERVED.</span>
+      <span>BUILD: RAW HTML/CSS/JS</span>
+    </footer>
+
+  </main>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
