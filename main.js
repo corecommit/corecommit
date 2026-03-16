@@ -83,10 +83,53 @@ const modalBtnSrc  = document.getElementById('modal-btn-source');
 
 function openModal(repo) {
   const tag = document.getElementById('modal-tag');
-  if (tag) tag.textContent = `[0x0${allRepos.indexOf(repo) + 1}] ${repo.full_name}`;
+  const metaEl = document.getElementById('modal-meta');
+  const langsEl = document.getElementById('modal-langs');
+
+  if (tag) tag.textContent = `[0x0${String(allRepos.indexOf(repo) + 1).padStart(2,'0')}] ${repo.full_name}`;
   modalName.textContent = repo.name.replace(/-/g, ' ').toUpperCase();
   modalDesc.textContent = repo.description || 'No description provided.';
   modalBtnSrc.href = repo.html_url;
+
+  // Meta row
+  if (metaEl) {
+    metaEl.innerHTML = `
+      <span class="modal-meta-item"><i class="fa-solid fa-star"></i> ${repo.stargazers_count}</span>
+      <span class="modal-meta-item"><i class="fa-solid fa-code-fork"></i> ${repo.forks_count}</span>
+      <span class="modal-meta-item"><i class="fa-regular fa-eye"></i> ${repo.watchers_count}</span>
+      <span class="modal-meta-item"><i class="fa-regular fa-clock"></i> ${timeAgo(repo.pushed_at)}</span>
+      ${repo.license ? `<span class="modal-meta-item"><i class="fa-solid fa-scale-balanced"></i> ${repo.license.spdx_id}</span>` : ''}
+    `;
+  }
+
+  // Language bar
+  if (langsEl) {
+    const langs = repo._langs || {};
+    const total = Object.values(langs).reduce((a, b) => a + b, 0) || 1;
+    const sorted = Object.entries(langs).sort((a, b) => b[1] - a[1]).slice(0, 6);
+
+    if (sorted.length) {
+      langsEl.innerHTML = `
+        <div class="modal-lang-bar">
+          ${sorted.map(([lang, bytes]) => {
+            const pct = Math.round((bytes / total) * 100);
+            const color = LANG_COLORS[lang] || '#666';
+            return `<span class="modal-lang-seg" style="width:${pct}%;background:${color}" title="${lang} ${pct}%"></span>`;
+          }).join('')}
+        </div>
+        <div class="modal-lang-chips">
+          ${sorted.map(([lang, bytes]) => {
+            const pct = Math.round((bytes / total) * 100);
+            const color = LANG_COLORS[lang] || '#666';
+            return `<span class="modal-lang-chip"><span class="lang-dot" style="background:${color}"></span>${lang} <span class="lang-pct">${pct}%</span></span>`;
+          }).join('')}
+        </div>
+      `;
+      langsEl.style.display = 'block';
+    } else {
+      langsEl.style.display = 'none';
+    }
+  }
 
   const siteUrl = repo.homepage?.trim() || null;
   if (siteUrl) {
