@@ -1,16 +1,24 @@
-## Hi there 👋
+# corecommit
 
-<!--
-**corecommit/corecommit** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+My personal portfolio. Built from scratch — no frameworks, no build tools, no fluff.
 
-Here are some ideas to get you started:
+→ **[corecommit.vercel.app](https://corecommit.vercel.app)**
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## Built with
+
+- Raw HTML, CSS & JavaScript
+- GitHub API — projects fetched live
+- Font Awesome 6 · Bebas Neue · Space Mono
+
+## Features
+
+- Live GitHub repos with stars, forks, language breakdown and topics
+- Sort by recent / stars / A–Z / forks
+- Click any project → modal with View Website + View Source
+- Fully responsive
+
+---
+
+*[MIT LICENSE](LICENSE)*
