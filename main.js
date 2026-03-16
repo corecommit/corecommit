@@ -1,4 +1,5 @@
 const GITHUB_USER = 'corecommit';
+const EXCLUDED_REPOS = ['corecommit'];
 
 const LANG_COLORS = {
   'C++':        '#f34b7d',
@@ -237,7 +238,7 @@ async function loadRepos() {
       if (!res.ok) throw new Error(`GitHub API ${res.status}: ${res.statusText}`);
       const batch = await res.json();
       if (!batch.length) break;
-      repos = repos.concat(batch.filter(r => !r.fork));
+      repos = repos.concat(batch.filter(r => !r.fork && !EXCLUDED_REPOS.includes(r.name)));
       if (batch.length < 100) break;
       page++;
     }
