@@ -37,5 +37,4 @@ I write code that works *(sometimes on the first try)*. Python & C++ are my comf
 <img src="https://github.com/maiz-an/GitHub-Achievements/raw/main/Media/Badges/Quick-Draw/PNG/Skin-Tones/QuickDraw_SkinTone1.png" height="56" /> <img src="https://github.com/maiz-an/GitHub-Achievements/raw/main/Media/Badges/Star-Struck/PNG/Skin-Tones/StarStruck_SkinTone1.png" height="56" /> <img src="https://github.com/maiz-an/GitHub-Achievements/raw/main/Media/Badges/Pair-Extraordinaire/PNG/PairExtraordinaire.png" height="56" /> <img src="https://github.com/maiz-an/GitHub-Achievements/raw/main/Media/Badges/Pull-Shark/PNG/PullShark.png" height="56" /> <img src="https://github.com/maiz-an/GitHub-Achievements/raw/main/Media/Badges/Galaxy-Brain/PNG/GalaxyBrain.png" height="56" /> <img src="https://github.com/maiz-an/GitHub-Achievements/raw/main/Media/Badges/YOLO/PNG/YOLO_Badge.png" height="56" />
 
 ---
-
 *"It's not a bug, it's a feature I haven't documented yet."*
