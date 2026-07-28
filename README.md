@@ -16,7 +16,7 @@ I write code. Python and C++ are home base, still figuring out JS and Rust as I 
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![VSCode](https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![opencode](https://img.shields.io/badge/opencode-000000?style=for-the-badge&logoColor=white)
+![opencode](https://img.shields.io/badge/opencode-000000?style=for-the-badge)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 ---
@@ -29,7 +29,8 @@ I write code. Python and C++ are home base, still figuring out JS and Rust as I 
 ---
 
 ## GitHub Stats
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=corecommit&show_icons=true&theme=tokyonight&hide=contribs)
+[![GitHub Streak](https://streak-stats.demolab.com/?user=corecommit&theme=tokyonight)](https://git.io/streak-stats)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=corecommit&layout=compact&theme=tokyonight)
 
 ---
 
