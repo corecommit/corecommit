@@ -28,11 +28,7 @@ I write code. Python and C++ are home base, still figuring out JS and Rust as I 
 
 ---
 
-## GitHub Stats
-[![GitHub Streak](https://streak-stats.demolab.com/?user=corecommit&theme=tokyonight)](https://git.io/streak-stats)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=corecommit&layout=compact&theme=tokyonight)
 
----
 
 ## Achievements
 <img src="https://github.com/maiz-an/GitHub-Achievements/raw/main/Media/Badges/Quick-Draw/PNG/Skin-Tones/QuickDraw_SkinTone1.png" height="56" /> <img src="https://github.com/maiz-an/GitHub-Achievements/raw/main/Media/Badges/Pull-Shark/PNG/PullShark.png" height="56" /> <img src="https://github.com/maiz-an/GitHub-Achievements/raw/main/Media/Badges/YOLO/PNG/YOLO_Badge.png" height="56" />
