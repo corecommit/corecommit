@@ -1,4 +1,4 @@
-# Hey, I'm Shreyan
+# Hey, I'm Equs
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=7B68EE&center=false&vCenter=true&width=600&lines=Python+%26+C%2B%2B+enjoyer;learning+JS+and+Rust;building+cool+stuff" alt="Typing SVG" />
 
