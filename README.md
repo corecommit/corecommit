@@ -1,3 +1,4 @@
-# Hey, I'm Equs
+# Equs
 
-and I vibecode (sometimes manually) and I don't GIVE TWO FUCKS about what you think about me
+I vibecode. Sometimes I type the code myself.
+I don't give a fuck what you think about that.
