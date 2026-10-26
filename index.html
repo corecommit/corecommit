@@ -1,84 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080b09">
-  <meta name="description" content="Corecommit — independent developer building useful software, systems tools, and self-hosted projects.">
-  <title>corecommit — Independent Developer</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%230b100c%22/><path d=%22M42 20H28a8 8 0 0 0-8 8v8a8 8 0 0 0 8 8h14%22 fill=%22none%22 stroke=%22%238ee6a1%22 stroke-width=%226%22 stroke-linecap=%22round%22/></svg>">
+  <meta name="description" content="Equs (corecommit): solo developer building fast, lightweight open-source software.">
+  <title>Equs | corecommit</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2322c55e'/><path d='M20 9l-8 7 8 7' stroke='%23050806' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
-  <div class="site-shell">
-    <header class="topbar">
-      <a class="brand" href="#home" aria-label="Corecommit home"><span class="brand-mark">c<span>.</span></span><span class="brand-word">corecommit</span></a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a class="nav-item active" href="#home">Overview</a>
-        <a class="nav-item" href="#skills">Toolkit</a>
-        <a class="nav-item" href="#projects">Projects</a>
-        <a class="nav-item" href="#contact">Contact</a>
-      </nav>
-      <a class="topbar-link" href="https://github.com/corecommit" target="_blank" rel="noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-    </header>
+  <header class="nav">
+    <a class="brand" href="#top">Equs</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#values">Values</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <main>
-      <section class="hero" id="home">
-        <div class="hero-grid"></div>
-        <div class="hero-copy">
-          <div class="eyebrow"><span class="eyebrow-line"></span> INDEPENDENT DEVELOPER <span class="eyebrow-index">/ 001</span></div>
-          <h1>Software with<br><span class="gradient-text">a reason to exist.</span></h1>
-          <p class="hero-description">I build practical tools, desktop software and self-hosted systems. Thoughtful engineering, useful details, and no unnecessary complexity.</p>
-          <div class="hero-actions"><a class="button button-primary" href="#projects">Explore projects <i class="fa-solid fa-arrow-down"></i></a><a class="button button-secondary" href="#contact">Get in touch <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-          <div class="hero-footnote"><span class="status-indicator"></span> <span>Currently building</span><span class="footnote-divider">/</span><span>Open to collaboration</span></div>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="hello">Hi, I'm Equs.</p>
+        <h1 id="title">I build fast, light software.</h1>
+        <p class="lede reveal">A solo developer making open-source apps and Linux tooling.</p>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <div class="tilt">
+          <div class="cube cube-a" style="--s:300px"></div>
+          <div class="cube cube-b" style="--s:200px"></div>
+          <div class="cube cube-c" style="--s:100px"></div>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="orb orb-back"></div><div class="orb orb-front"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-          <div class="art-center"><span class="art-symbol">c<span>.</span></span><span class="art-caption">BUILD / ITERATE / IMPROVE</span></div>
-          <div class="art-coordinate coordinate-one">51° 30' N</div><div class="art-coordinate coordinate-two">OPEN SOURCE · 2026</div>
-        </div>
-        <div class="hero-bottom"><span>01 — INTRODUCTION</span><span>BUILT WITH CURIOSITY <span class="tiny-line"></span></span></div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section about-section" id="about">
-        <div class="section-kicker">01 <span></span> THE APPROACH</div>
-        <div class="about-layout"><h2>Small details.<br><span class="muted-heading">Solid foundations.</span></h2><div class="about-copy"><p>I like understanding how things work, then making them work better. My projects span desktop applications, Linux tooling, automation and the infrastructure that keeps services running.</p><p>I value software that stays understandable: clear interfaces, maintainable code and features that solve an actual problem.</p></div></div>
-        <div class="principles"><article class="principle"><span class="principle-number">01</span><h3>Purposeful</h3><p>Build around real needs, not feature lists.</p></article><article class="principle"><span class="principle-number">02</span><h3>Independent</h3><p>Explore ideas and own the whole stack.</p></article><article class="principle"><span class="principle-number">03</span><h3>Maintainable</h3><p>Keep the structure clear and the tools useful.</p></article></div>
-      </section>
+    <section id="about" class="block">
+      <h2 class="reveal">About me</h2>
+      <div class="prose">
+        <p class="reveal">I'm a developer who builds open-source software, mostly desktop and mobile apps and tools for Linux. I work on my own, which means I get to care about every detail, from how an app starts up to how it feels to use.</p>
+        <p class="reveal">I write mostly C++, Rust and Python. I care about software that is fast, lightweight and pleasant to use.</p>
+        <p class="reveal">Outside of my projects I experiment with software, Linux and Android. Feedback is always welcome.</p>
+      </div>
+    </section>
 
-      <section class="section skills-section" id="skills">
-        <div class="section-heading"><div><div class="section-kicker">02 <span></span> THE TOOLKIT</div><h2>Tools of the trade<span class="green-dot">.</span></h2></div><p>A practical mix of languages, platforms<br>and tools for turning ideas into software.</p></div>
-        <div class="skill-grid">
-          <article class="skill-card"><div class="skill-top"><span>LANGUAGE / 01</span><i class="fa-solid fa-code"></i></div><h3>C++</h3><p>Desktop applications, systems programming and performance-conscious software.</p><div class="skill-tags"><span>C++17</span><span>Qt</span><span>OOP</span></div></article>
-          <article class="skill-card"><div class="skill-top"><span>LANGUAGE / 02</span><i class="fa-brands fa-python"></i></div><h3>Python</h3><p>Automation, scripting, backend tooling and fast experimentation.</p><div class="skill-tags"><span>Automation</span><span>Backend</span><span>CLI</span></div></article>
-          <article class="skill-card"><div class="skill-top"><span>WEB / 03</span><i class="fa-solid fa-laptop-code"></i></div><h3>HTML / CSS</h3><p>Accessible, responsive interfaces built with a focus on the fundamentals.</p><div class="skill-tags"><span>Responsive</span><span>CSS</span><span>UI</span></div></article>
-          <article class="skill-card skill-learning"><div class="skill-top"><span>LANGUAGE / 04</span><span class="learning-label">IN PROGRESS</span></div><h3>JavaScript</h3><p>Browser interactions, Node.js services and API integrations.</p><div class="skill-tags"><span>Node.js</span><span>REST</span><span>Web</span></div></article>
-          <article class="skill-card skill-learning"><div class="skill-top"><span>LANGUAGE / 05</span><span class="learning-label">IN PROGRESS</span></div><h3>Java</h3><p>Object-oriented programming and application fundamentals.</p><div class="skill-tags"><span>OOP</span><span>CLI</span><span>JVM</span></div></article>
-        </div>
-        <div class="ecosystem"><span class="ecosystem-label">ALSO IN THE WORKFLOW</span><div class="ecosystem-list"><span>Linux</span><span>Git</span><span>Docker</span><span>Self-hosting</span><span>Bash</span><span>REST APIs</span><span>Hyprland</span><span>Tailscale</span><span>SDL2</span><span>Lua</span></div></div>
-      </section>
+    <section id="values" class="block">
+      <h2 class="reveal">What I care about</h2>
+      <dl class="values">
+        <div class="reveal"><dt>Fast</dt><dd>Software should respond right away and never make you wait.</dd></div>
+        <div class="reveal"><dt>Light</dt><dd>Small footprint, few moving parts, nothing you did not ask for.</dd></div>
+        <div class="reveal"><dt>Pleasant</dt><dd>The details decide whether a tool feels good to use every day.</dd></div>
+      </dl>
+    </section>
 
-      <section class="section projects-section" id="projects">
-        <div class="section-heading projects-heading"><div><div class="section-kicker">03 <span></span> SELECTED WORK</div><h2>Projects<span class="green-dot">.</span></h2></div><p>Open-source experiments, utilities and<br>software built one iteration at a time.</p></div>
-        <div class="projects-toolbar"><span class="repo-count" id="repo-count">Loading repositories</span><div class="sort-row" role="group" aria-label="Sort projects"><button class="sort-btn active" data-sort="updated">Recently updated</button><button class="sort-btn" data-sort="stars">Most stars</button><button class="sort-btn" data-sort="name">A–Z</button><button class="sort-btn" data-sort="forks">Most forks</button></div></div>
-        <div id="projects-container"><div class="state-box"><span class="loading-ring"></span><span>Connecting to GitHub repositories…</span></div></div>
-        <div class="github-note"><span class="note-line"></span><span>Live repository data from GitHub</span><a href="https://github.com/corecommit?tab=repositories" target="_blank" rel="noreferrer">Browse all repositories <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-      </section>
+    <section id="contact" class="block contact">
+      <h2 class="reveal">Say hello</h2>
+      <p class="reveal">Questions, ideas or bug reports are all welcome.</p>
+      <a class="btn reveal" href="mailto:corecommit@protonmail.com">corecommit@protonmail.com</a>
+      <p class="alt reveal">Or find me on <a href="https://github.com/corecommit" target="_blank" rel="noopener">GitHub</a>.</p>
+    </section>
+  </main>
 
-      <section class="section contact-section" id="contact">
-        <div class="contact-panel"><div class="contact-glow"></div><div class="section-kicker">04 <span></span> START A CONVERSATION</div><div class="contact-layout"><div><h2>Have something<br><span class="gradient-text">in mind?</span></h2><p>Have an idea, a project to discuss, or just want to talk about software? My inbox is open.</p></div><a class="contact-cta" href="mailto:commitcore@gmail.com"><span>Write me a message</span><span class="cta-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a></div><div class="contact-bottom"><a href="https://github.com/corecommit" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> github.com/corecommit</a><a href="mailto:commitcore@gmail.com"><i class="fa-regular fa-envelope"></i> commitcore@gmail.com</a></div></div>
-      </section>
-    </main>
-    <footer class="footer"><a class="footer-brand" href="#home">corecommit<span>.</span></a><span>Independent by design. Built with care.</span><span>© 2026</span></footer>
-  </div>
+  <footer class="foot">
+    <span>&copy; 2026 Equs</span>
+  </footer>
 
-  <div class="modal-backdrop" id="modal-backdrop" aria-hidden="true"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-name"><button class="modal-close" id="modal-close" aria-label="Close project details"><i class="fa-solid fa-xmark"></i></button><div class="modal-tag" id="modal-tag"></div><h2 class="modal-name" id="modal-name"></h2><div class="modal-meta-row" id="modal-meta"></div><div class="modal-divider"></div><p class="modal-desc" id="modal-desc"></p><div class="modal-langs" id="modal-langs"></div><div class="modal-actions"><a class="modal-btn modal-btn-primary" id="modal-btn-website" href="#" target="_blank" rel="noreferrer">Visit website <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a class="modal-btn modal-btn-ghost" id="modal-btn-source" href="#" target="_blank" rel="noreferrer">View source <i class="fa-brands fa-github"></i></a></div></section></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" defer></script>
-  <script src="main.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
