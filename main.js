@@ -2,30 +2,30 @@ const GITHUB_USER = 'corecommit';
 const EXCLUDED_REPOS = ['corecommit'];
 
 const LANG_COLORS = {
-  'C++':        '#f34b7d',
-  'C':          '#555555',
-  'Python':     '#3572A5',
-  'JavaScript': '#f1e05a',
-  'TypeScript': '#3178c6',
-  'Java':       '#b07219',
-  'Kotlin':     '#A97BFF',
-  'Rust':       '#dea584',
-  'Go':         '#00ADD8',
-  'Shell':      '#89e051',
-  'HTML':       '#e34c26',
-  'CSS':        '#563d7c',
-  'Lua':        '#6699cc',
-  'Ruby':       '#701516',
-  'Swift':      '#F05138',
-  'Dart':       '#00B4AB',
-  'Vue':        '#41b883',
-  'Svelte':     '#ff3e00',
-  'SCSS':       '#c6538c',
-  'Makefile':   '#427819',
-  'CMake':      '#DA3434',
-  'Nix':        '#7e7eff',
-  'Zig':        '#ec915c',
-  'Haskell':    '#5e5086',
+  'C++': '#8fe8a3',
+  'C': '#659a70',
+  'Python': '#9beab0',
+  'JavaScript': '#78cb8c',
+  'TypeScript': '#6bbd80',
+  'Java': '#a7efb6',
+  'Kotlin': '#86d99a',
+  'Rust': '#b4f3bf',
+  'Go': '#8fe8a3',
+  'Shell': '#659a70',
+  'HTML': '#9beab0',
+  'CSS': '#78cb8c',
+  'Lua': '#6bbd80',
+  'Ruby': '#a7efb6',
+  'Swift': '#86d99a',
+  'Dart': '#b4f3bf',
+  'Vue': '#8fe8a3',
+  'Svelte': '#659a70',
+  'SCSS': '#9beab0',
+  'Makefile': '#78cb8c',
+  'CMake': '#6bbd80',
+  'Nix': '#a7efb6',
+  'Zig': '#86d99a',
+  'Haskell': '#b4f3bf',
 };
 
 let allRepos    = [];
@@ -143,11 +143,13 @@ function openModal(repo) {
   }
 
   backdrop.classList.add('open');
+  backdrop.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
   backdrop.classList.remove('open');
+  backdrop.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
 }
 
@@ -343,3 +345,90 @@ document.querySelectorAll('section[id]').forEach(s => navObs.observe(s));
 // ── BOOT ──────────────────────────────────────────────────────────────────────
 
 loadRepos();
+
+// ── ANIME.JS MOTION ───────────────────────────────────────────────────────────
+// Motion is intentionally restrained: short entrances, small distances, no
+// animated gradients or decorative effects that compete with the content.
+(function initMotion() {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const animeReady = typeof window.anime === 'function';
+  if (reduceMotion || !animeReady) return;
+
+  anime({
+    targets: '.topbar',
+    opacity: [0, 1],
+    translateY: [-8, 0],
+    duration: 500,
+    easing: 'easeOutQuad'
+  });
+
+  anime({
+    targets: '.hero-copy > *',
+    opacity: [0, 1],
+    translateY: [14, 0],
+    delay: anime.stagger(75, {start: 100}),
+    duration: 650,
+    easing: 'easeOutCubic'
+  });
+
+  anime({
+    targets: '.hero-art',
+    opacity: [0, 0.85],
+    scale: [0.97, 1],
+    duration: 850,
+    delay: 180,
+    easing: 'easeOutCubic'
+  });
+
+  const animateIn = (elements) => {
+    const list = Array.from(elements).filter(el => !el.dataset.motionPlayed);
+    if (!list.length) return;
+    list.forEach(el => { el.dataset.motionPlayed = 'true'; });
+    anime({
+      targets: list,
+      opacity: [0, 1],
+      translateY: [12, 0],
+      delay: anime.stagger(55),
+      duration: 520,
+      easing: 'easeOutCubic'
+    });
+  };
+
+  const motionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const section = entry.target;
+      animateIn(section.querySelectorAll('.principle, .skill-card, .ecosystem-list span, .project-card'));
+      motionObserver.unobserve(section);
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.section').forEach(section => motionObserver.observe(section));
+
+  // GitHub cards arrive asynchronously; animate each new batch once it appears.
+  const projectContainer = document.getElementById('projects-container');
+  if (projectContainer) {
+    const projectObserver = new MutationObserver(() => {
+      const cards = projectContainer.querySelectorAll('.project-card:not([data-motion-played])');
+      if (cards.length) animateIn(cards);
+    });
+    projectObserver.observe(projectContainer, { childList: true, subtree: true });
+  }
+
+  // A quiet hover response for the circular mark; no continuous motion.
+  const mark = document.querySelector('.brand-mark');
+  if (mark) {
+    mark.addEventListener('mouseenter', () => anime({
+      targets: mark,
+      borderColor: ['#344436', '#8ee6a1'],
+      duration: 220,
+      easing: 'easeOutQuad'
+    }));
+    mark.addEventListener('mouseleave', () => anime({
+      targets: mark,
+      borderColor: '#344436',
+      duration: 220,
+      easing: 'easeOutQuad'
+    }));
+  }
+})();
